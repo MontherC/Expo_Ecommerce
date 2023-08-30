@@ -4,21 +4,20 @@ import { SIZES, COLORS } from "../constants";
 
 const styles = StyleSheet.create({
         textStyle:{
-            fontFmaily:"bold",
+            fontFmaily:'bold',
             fontSize: SIZES.large,
         },
         appBarWrapper:{
             marginHorizontal: SIZES.medium,
-            marginTop: SIZES.small,
+            marginTop: SIZES.large,
         },
         appBar:{
-            flex:1,
             flexDirection: "row",
             justifyContent: "space-between",
             alignItems:"center",
         },
         location:{
-            fontFamily: "light",
+            // fontFamily: 'light',
             fontSize: SIZES.medium,
             color: COLORS.darkGray,
         },
@@ -31,8 +30,18 @@ const styles = StyleSheet.create({
             alignItems:"center",
             backgroundColor:COLORS.green,
             justifyContent:"center",
-            zIndex: -1
-        }
+            zIndex: 999
+        },
+        cartNumber:{
+            fontFamily:'regular',
+            fontSize:SIZES.xSmall,
+            color: COLORS.white,
+            fontWeight:600
+
+        },
+        cart:(pressed) =>[{
+                opacity: pressed ? 0.5 : 1.0 
+            }],
 })
 
 export default styles;
